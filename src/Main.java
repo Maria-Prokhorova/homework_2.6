@@ -20,7 +20,7 @@ public class Main {
          */
         System.out.println("Задача 2");
         Collections.sort(nums);
-        Collection<Integer> newNums = removeDuplicates(nums);
+        List<Integer> newNums = removeDuplicates(nums);
         task2(newNums);
         System.out.println();
 
@@ -32,7 +32,7 @@ public class Main {
          */
         System.out.println("Задача 3");
         List<String> words = new ArrayList<>(List.of("один", "два", "два", "три", "три", "три"));
-        Collection<String> newWords = removeDuplicates(words);
+        List<String> newWords = removeDuplicates(words);
         System.out.println(newWords);
 
         /* Задание 4
@@ -46,7 +46,7 @@ public class Main {
 
     }
 
-    public static void task1(Collection<Integer> numbers) {
+    public static void task1(List<Integer> numbers) {
         for (Integer number : numbers) {
             if (number % 2 != 0) {
                 System.out.print(number);
@@ -55,7 +55,7 @@ public class Main {
         }
     }
 
-    public static void task2(Collection<Integer> numbers) {
+    public static void task2(List<Integer> numbers) {
         for (Integer number : numbers) {
             if (number % 2 == 0) {
                 System.out.print(number);
@@ -64,8 +64,8 @@ public class Main {
         }
     }
 
-    public static <T> Collection<T> removeDuplicates(Collection<T> list) {
-        Collection<T> newList = new ArrayList<>();
+    public static <T> List<T> removeDuplicates(List<T> list) {
+        List<T> newList = new ArrayList<>();
         for (T element : list) {
             if (!newList.contains(element)) {
                 newList.add(element);
